@@ -1,0 +1,69 @@
+
+/* ----- Column Formula ----- */
+
+/* width: calc(100% - (total number of gutters * #{gutter size})) / total number of columns)* column width) + number of gutters needed to fill gap in column width#{gutter size}); */
+
+/* ----- Column classes ----- */
+
+.col__12-12 {
+  width: 100% !important;
+}
+
+.col__12-11 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 11) + 10 * #{$primaryPadding}) !important;
+}
+
+.col__12-10 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 10) + 9 * #{$primaryPadding}) !important;
+}
+
+.col__12-9 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 9) + 8 * #{$primaryPadding}) !important;
+}
+
+.col__12-8 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 8) + 7 * #{$primaryPadding}) !important;
+}
+
+.col__12-7 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 7) + 6 * #{$primaryPadding}) !important;
+}
+
+.col__12-6 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 6) + 5 * #{$primaryPadding}) !important;
+}
+
+.col__12-5 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 5) + 4 * #{$primaryPadding}) !important;
+}
+
+.col__12-4 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 4) + 3 * #{$primaryPadding}) !important;
+}
+
+.col__12-3 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 3) + 2 * #{$primaryPadding}) !important;
+}
+
+.col__12-2 {
+  width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 2) + #{$primaryPadding}) !important;
+}
+
+.col__12-1 {
+  width: calc((100% - (11 * #{$primaryPadding})) / 12) !important;
+}
+
+@media all and (max-width: 900px) {
+  .col__12-1, .col__12-2, .col__12-3, .col__12-4, .col__12-5{
+    width: calc((((100% - (11 * #{$primaryPadding})) / 12) * 6) + 5 * #{$primaryPadding}) !important;
+  }
+  .col__12-6, .col__12-7, .col__12-8, .col__12-9, .col__12-10, .col__12-11 {
+    width: 100% !important;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .col__12-1, .col__12-2, .col__12-3, .col__12-4, .col__12-5, .col__12-6 {
+    width: 100% !important;
+  }
+}

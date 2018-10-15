@@ -1,0 +1,120 @@
+
+.header{
+  background: $primaryPurple--dark url("../img/angle-of-the-north.jpg") no-repeat center;
+  background-size: cover;
+  color: $white;
+  max-height: 700px;
+  box-sizing: border-box;
+}
+
+.header--purple{
+  color: $primaryPurple;
+}
+
+.header__headline{
+  padding: $primaryPadding--3x 0 calculate-rem(140px) 0;
+}
+
+@media all and (max-width: 600px) {
+  .header{
+    height: auto;
+  }
+  .header__headline{
+    padding: $primaryPadding--1half 0 $primaryPadding--3x;
+  }
+}
+
+/*----- Navigation -----*/
+
+.nav{
+  @include flexSpaceBetween;
+  padding: $primaryPadding 0 0 0;
+}
+
+.nav--purple{
+  @include flexSpaceBetween;
+  padding: $primaryPadding 0 $primaryPadding--2x 0;
+}
+
+@media all and (max-width: 600px) {
+  .nav--purple{
+    padding-bottom: $primaryPadding--1half;
+  }
+}
+
+.nav__logo{
+  align-items: center;
+  @include flexJustifyLeft;
+}
+
+.nav__logoImage{
+  max-width: calculate-rem(168px);
+}
+
+.nav__logoText{
+  display: block;
+  font: 700 calculate-rem(24px)/calculate-rem(34px) 'Poppins', sans-serif;
+  margin-left: $primaryPadding--half;
+}
+
+.nav__items{
+  @include flexJustifyRight;
+  align-items: center;
+}
+
+.nav__link{
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  margin: 0 $primaryPadding--1half 0 0;
+}
+
+.nav__link:after{
+  content: "";
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  width: 0;
+  bottom: -1rem;
+  background: $primaryPurple;
+  height: calculate-rem(6px);
+  transition-property: width;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+}
+
+.nav__link:hover:after, .nav__link:focus:after, .nav__link:active:after{
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+.nav__itemsTwitter{
+  margin: calculate-rem(7px) 0 0 0;
+  padding: 0 $primaryPadding--half 0 0;
+}
+.nav__itemsTwitter:last-child{
+  padding: 0;
+}
+
+@media all and (max-width: 900px) {
+  .nav__link{
+    display: none;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .nav__logo{
+    width: 100%;
+  }
+  .nav__logoImage{
+    max-width: calculate-rem(110px);
+  }
+  .nav__logoText{
+    font-size: calculate-rem(16px);
+  }
+  .nav__items{
+    display: none;
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressive independent professional</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+    <link href="libs/css/main.css" rel="stylesheet">
+</head>
+<body>
+<header class="header--purple">
+    <section class="wrapper">
+        <nav class="nav--purple">
+            <span class="nav__logo">
+                <img class="nav__logoImage" src="libs/img/CF_Logo--Purple.png">
+                <span class="nav__logoText">NEone Creative</span>
+            </span>
+            <div class="nav__items">
+                <a class="button" href="test.html">Take the test</a>
+            </div>
+        </nav>
+    </section>
+</header>
+<main class="wrapper section">
+    <section class="col__12-2">
+        <img class="archetype__image" src="libs/img/archetypes/progressive.jpg" alt="progressive"/>
+    </section>
+    <section class="archetype col__12-10">
+        <h4 class="h1 archetype__name">Progressive <span class="text--dark">independent professional</span></h4>
+        <h5 class="h3 archetype__desc">Of persons, communities, etc: developing, changing, progressing; especially advancing in or gaining some desirable attribute or quality; improving, or able to improve</h5>
+        <article class="archetype__info">
+            <div class="col__12-6">
+                <h6 class="h2 text--dark">Behaviour</h6>
+                <p class="archetype__infoText">
+                    You tend to be a founder who is able to scale an idea, and have tested the water in a low risk environment and then built it upwards.  You are at this point in your work journey because you have a particular goal in mind.  You have the tendency to focus solely on certain aspects at any one time and would value support on how to delegate certain activities.
+                </p>
+            </div>
+            <div class="col__12-5">
+                <h6 class="h2 text--dark">Should work with</h6>
+                <ul class="archetype__list">
+                    <li><a class="archetype__link" href="impulsive.html" target="_blank">Impulsive</a></li>
+                    <li><a class="archetype__link" href="reactive.html" target="_blank">Reactive</a></li>
+                    <li><a class="archetype__link" href="intuitive.html" target="_blank">Intuitive</a></li>
+                </ul>
+            </div>
+            <div class="col__12-6">
+                <h6 class="h2 text--dark">May need to</h6>
+                <ul class="archetype__list">
+                    <li>Delegate their activities</li>
+                    <li>Invest in right people</li>
+                    <li>Invest energy in right places</li>
+                </ul>
+            </div>
+            <div class="col__12-5">
+                <h6 class="h2 text--dark">Is likely to</h6>
+                <ul class="archetype__list">
+                    <li>See themselves as a business owner</li>
+                    <li>Want to scale and grow</li>
+                    <li>Think long-term</li>
+                </ul>
+            </div>
+        </article>
+        <footer class="footer">&copy; Copyright <script>document.write((new Date()).getFullYear())</script> NEone Creative</footer>
+    </section>
+    <div class="overlay">
+        <header class="header--purple">
+            <section class="wrapper">
+                <nav class="nav--purple">
+                    <span class="nav__logo">
+                        <img class="nav__logoImage" src="libs/img/CF_Logo--Purple.png">
+                        <span class="nav__logoText">NEone Creative</span>
+                    </span>
+                </nav>
+            </section>
+        </header>
+        <section class="wrapper modal">
+            <article class="modal__body col__12-8">
+                <h2 class="h1 text--dark modal__heading">To find out about this behaviour and its related attributes please take the test</h2>
+                <a href="test.html" class="button">Take the test</a>
+            </article>
+        </section>
+    </div>
+    <script>
+        if(localStorage.getItem('finishedTest') !== 'Yes'){
+            document.getElementsByClassName('overlay')[0].style.display = 'block';
+        }
+    </script>
+</main>
+</body>
+</html>

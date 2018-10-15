@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intuitive independent professional</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,700" rel="stylesheet">
+    <link href="libs/css/main.css" rel="stylesheet">
+</head>
+<body>
+<header class="header--purple">
+    <section class="wrapper">
+        <nav class="nav--purple">
+            <span class="nav__logo">
+                <img class="nav__logoImage" src="libs/img/CF_Logo--Purple.png">
+                <span class="nav__logoText">NEone Creative</span>
+            </span>
+            <div class="nav__items">
+                <a class="button" href="test.html">Take the test</a>
+            </div>
+        </nav>
+    </section>
+</header>
+<main class="wrapper section">
+    <section class="col__12-2">
+        <img class="archetype__image" src="libs/img/archetypes/intuitive.jpg" alt="intuitive"/>
+    </section>
+    <section class="archetype col__12-10">
+        <h4 class="h1 archetype__name">Intuitive <span class="text--dark">independent professional</span></h4>
+        <h5 class="h3 archetype__desc">Of knowledge or mental perception: That consists in immediate apprehension, without the intervention of any reasoning process</h5>
+        <article class="archetype__info">
+            <div class="col__12-6">
+                <h6 class="h2 text--dark">Behaviour</h6>
+                <p class="archetype__infoText">
+                    You tend to be drawn to opportunities that will produce tangible benefits, and you know what you want to do in your working life.  You may be at this point in your work journey because of a life event (e.g. graduation, redundancy, etc.) and are freelancing with the goal to move into employment.  You may need help in understanding the value (worth not just exposure) of your skills and abilities.
+                </p>
+            </div>
+            <div class="col__12-5">
+                <h6 class="h2 text--dark">Should work with</h6>
+                <ul class="archetype__list">
+                    <li><a class="archetype__link" href="transactive.html" target="_blank">Transactive</a></li>
+                    <li><a class="archetype__link" href="proactive.html" target="_blank">Proactive</a></li>
+                    <li><a class="archetype__link" href="inquisitive.html" target="_blank">Inquisitive</a></li>
+                </ul>
+            </div>
+            <div class="col__12-6">
+                <h6 class="h2 text--dark">May need to</h6>
+                <ul class="archetype__list">
+                    <li>Move with intent</li>
+                    <li>Select which opportunities to pursue</li>
+                    <li>Need to find a critical friend</li>
+                </ul>
+            </div>
+            <div class="col__12-5">
+                <h6 class="h2 text--dark">Is likely to</h6>
+                <ul class="archetype__list">
+                    <li>Know their value and their service</li>
+                    <li>Seek a place for employment</li>
+                    <li>Look for projects that showcase skills</li>
+                </ul>
+            </div>
+        </article>
+        <footer class="footer">&copy; Copyright <script>document.write((new Date()).getFullYear())</script> NEone Creative</footer>
+    </section>
+    <div class="overlay">
+        <header class="header--purple">
+            <section class="wrapper">
+                <nav class="nav--purple">
+                    <span class="nav__logo">
+                        <img class="nav__logoImage" src="libs/img/CF_Logo--Purple.png">
+                        <span class="nav__logoText">NEone Creative</span>
+                    </span>
+                </nav>
+            </section>
+        </header>
+        <section class="wrapper modal">
+            <article class="modal__body col__12-8">
+                <h2 class="h1 text--dark modal__heading">To find out about this behaviour and its related attributes please take the test</h2>
+                <a href="test.html" class="button">Take the test</a>
+            </article>
+        </section>
+    </div>
+    <script>
+        if(localStorage.getItem('finishedTest') !== 'Yes'){
+            document.getElementsByClassName('overlay')[0].style.display = 'block';
+        }
+    </script>
+</main>
+</body>
+</html>

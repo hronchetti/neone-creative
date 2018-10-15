@@ -1,0 +1,69 @@
+
+/*----- Font sizes -----*/
+
+.h1{
+  font: 700 $primaryPadding--2x/$primaryPadding--3x 'Poppins', sans-serif;
+  margin: 0 0 $primaryPadding--1half 0;
+  max-width: 100%;
+}
+
+.h2{
+  font: 700 $primaryPadding/$primaryPadding--1half 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.h3{
+  font: 400 $primaryPadding/$primaryPadding--1half 'Poppins', sans-serif;
+  margin: 0;
+}
+
+.p, body{
+  font: 400 calculate-rem(20px)/calculate-rem(30px) 'Poppins', sans-serif;
+  color: $primaryPurple--light;
+}
+
+@media all and (max-width: 600px) {
+  body{
+    font-size: 16px;
+  }
+  .h1{
+    font-size: calculate-rem(34px);
+    line-height: calculate-rem(48px);
+  }
+  .h2{
+    font-size: calculate-rem(24px);
+    line-height: calculate-rem(38px);
+  }
+  .h3{
+    font-size: calculate-rem(20px);
+    line-height: calculate-rem(36px);
+  }
+}
+
+/*----- Font colours -----*/
+
+.text--white{
+  color: $white;
+}
+
+.text--superLight{
+  color: $primaryPurple--superLight;
+}
+
+.text--light{
+  color: $primaryPurple--light;
+}
+
+.text--core{
+  color: $primaryPurple;
+}
+
+.text--dark{
+  color: $primaryPurple--dark;
+}
+
+/*----- Font weights -----*/
+
+.bold{
+  font-weight: 700;
+}

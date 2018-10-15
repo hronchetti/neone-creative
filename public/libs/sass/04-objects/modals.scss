@@ -1,0 +1,21 @@
+
+.overlay{
+  display: none;
+  background: $white;
+  width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  box-sizing: border-box;
+}
+
+.modal__body{
+  margin: 0 auto;
+  padding-bottom: $primaryPadding--4x;
+}
+
+.modal__heading{
+  margin: 0 0 $primaryPadding--1half 0;
+}

@@ -1,0 +1,23 @@
+.wrapper{
+  width: calc(100% - #{$primaryPadding--3x});
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.wrapper--padded{
+  width: calc(100% - #{$primaryPadding--3x});
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: $primaryPadding--1half 0;
+  @include flexSpaceBetween;
+}
+
+@media all and (max-width: 600px) {
+  .wrapper, .wrapper--padded{
+    width: calc(100% - #{$primaryPadding});
+  }
+}
+
+body{
+  position: relative;
+}

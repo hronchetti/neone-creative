@@ -1,0 +1,204 @@
+
+/*----- Test logical classes -----*/
+
+.test{
+  padding: $primaryPadding 0 0 0;
+  font: 400 calculate-rem(18px) / calculate-rem(28px) 'Poppins', sans-serif;;
+}
+
+.test__section{
+  padding: 0 0 $primaryPadding--1half 0;
+  border: none;
+  margin: 0;
+}
+
+.test__sectionHeading{
+  color: $primaryPurple;
+  line-height: calculate-rem(32px);
+}
+
+/*----- Test positional classes -----*/
+
+.test__row{
+  @include flexJustifyLeft;
+  padding: $primaryPadding--half calculate-rem(20px);
+}
+
+.test__row:nth-child(even){
+  background: $primaryPurple--superLight;
+}
+
+.test__rowTopic{
+  color: $primaryPurple--dark;
+  width: calc((100% / 8) *2);
+  font-weight: 700;
+}
+
+.test__rowTopic--wide{
+  width: 100%;
+}
+
+.test__row--white:nth-child(even){
+  background: $white;
+}
+
+.test__rowContent{
+  width: calc((100% / 8) *6);
+  @include flexJustifyLeft;
+  line-height: calculate-rem(24px);
+  align-items: center;
+}
+
+.test__rowContent--select{
+  width: 50%;
+  padding: 0 0 $primaryPadding--half 0;
+  @include flexSpaceBetween;
+  position: relative;
+  margin-right: 50%;
+  align-items: center;
+}
+
+.test__rowContent__column{
+  color: $primaryPurple--dark;
+  width: calc(100% / 6);
+  text-align: center;
+  position: relative;
+  top: -4px;
+}
+
+.test__rowContent--mobile{
+  display: none;
+}
+
+/*----- Form elements -----*/
+
+input::-webkit-contacts-auto-fill-button, input::-webkit-credentials-auto-fill-button{
+  display: none !important;
+}
+
+input::-ms-clear, input::-webkit-clear-button, input::-ms-reveal, input::-webkit-search-cancel-button, input::-webkit-caps-lock-indicator, select::-ms-expand{
+  display: none !important;
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+input:focus, select:focus, textarea:focus{
+  outline: none;
+  border: 1px solid $primaryPurple;
+}
+
+.test__label{
+  font-weight: 700;
+  color: $primaryPurple--dark;
+  padding: 0 $primaryPadding 0 0;
+  width: calc(100% / 3);
+  display: block;
+  box-sizing: border-box;
+}
+
+.test__label--fullWidth{
+  width:100%;
+  display: block;
+  padding: $primaryPadding--half 0 0 0;
+
+  & input{
+    margin-right: calculate-rem(10px);
+  }
+}
+
+.test__select{
+  border: 1px $primaryPurple--superLight solid;
+  font: 400 calculate-rem(20px)/calculate-rem(25px) 'Poppins', sans-serif;
+  appearance: none;
+  padding: calculate-rem(10px) $primaryPadding--half;
+  background: $white;
+  width: calc((100% /3) *2);
+  box-sizing: border-box;
+  height: calculate-rem(48px);
+  border-radius: 4px;
+}
+
+.test__sectionChevron{
+  position: absolute;
+  right: calculate-rem(5px);
+  top: calculate-rem(9px);
+  user-select: none;
+  pointer-events: none;
+  background: $white;
+  padding: calculate-rem(10px);
+}
+
+@media all and (max-width: 900px) {
+
+  .test__rowContent--select{
+    width: calc((100% /3) *2);
+    margin-right: calc(100% /3);
+  }
+
+  .test__rowContent{
+    font-size: calculate-rem(14px);
+    line-height: calculate-rem(18px);
+  }
+
+  .test__rowTopic{
+    font-size: calculate-rem(16px);
+    line-height: calculate-rem(24px);
+  }
+}
+
+@media all and (max-width: 600px) {
+
+  .test__sectionHeading{
+    padding-bottom: $primaryPadding--half;
+  }
+  .test__row{
+    padding: $primaryPadding--half;
+  }
+
+  .test__row:first-child{
+    padding: 0 0 $primaryPadding--half 0;
+  }
+
+  .test__rowTopic{
+    width: 100%;
+  }
+
+  .test__rowContent{
+    font-size: calculate-rem(10px);
+    line-height: calculate-rem(12px);
+    width: 100%;
+    @include flexSpaceBetween;
+    padding: calculate-rem(20px) 0 0 0;
+  }
+
+  .test__row--white{
+    padding: 0 0 $primaryPadding--half 0;
+  }
+
+  .test__rowContent--select{
+    width: 100%;
+    margin: 0;
+  }
+
+  .test__rowContent__column{
+    top: 0;
+  }
+  
+  .test__rowContent--mobile{
+    display: flex;
+  }
+  .test__rowContent--desktop{
+    display: none;
+  }
+}
+
+.errorSpace{
+  color: $accentRed;
+  padding: $primaryPadding--half 0;
+  display: block;
+}
+
+.questionMissed{
+  border: 1px solid $accentRed;
+}

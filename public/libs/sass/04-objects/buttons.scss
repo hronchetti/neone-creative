@@ -1,0 +1,28 @@
+
+a{
+  text-decoration: none;
+}
+
+.button{
+  background: $primaryPurple;
+  border-radius: $primaryPadding;
+  padding: calculate-rem(15px) $primaryPadding;
+  font: 400 calculate-rem(20px)/$primaryPadding 'Poppins', sans-serif;
+  color: $white;
+  cursor: pointer;
+  display: inline-block;
+  opacity: 1;
+  transform: perspective(1px) translateZ(0);
+  transition: transform 0.3s ease-out, opacity 0.2s ease-out;
+  border: none;
+}
+
+.button:hover, .button:active, .button:focus{
+  transform: translateY(-4px);
+  opacity: 0.75;
+}
+
+.textLink{
+  color: $accentBlue;
+  text-decoration: underline;
+}

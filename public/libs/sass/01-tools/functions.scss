@@ -1,0 +1,7 @@
+
+/*----- Function for inputting px value and returning rem when compiled -----*/
+
+@function calculate-rem($size) {
+  $rem-size: $size / 16px;
+  @return #{$rem-size}rem;
+}

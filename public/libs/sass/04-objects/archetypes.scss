@@ -1,0 +1,156 @@
+
+/*----- Archetype previews -----*/
+
+.archetypes__collection{
+  @include flexSpaceBetween;
+  width: 100%;
+  margin-bottom: $primaryPadding;
+}
+
+.archetype__preview{
+  position: relative;
+  padding: $primaryPadding 0;
+}
+
+.archetype__previewImage{
+  box-sizing: border-box;
+  display: block;
+  width: 50%;
+  border: 5px solid $primaryPurple;
+  border-radius: 100%;
+  opacity: .125;
+}
+
+.archetype__previewText{
+  position: absolute;
+  display: block;
+  width: 75%;
+  top: calc(50% - (#{$primaryPadding--1half}/2));
+  left: 25%;
+  color: $primaryPurple--dark;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.archetype__preview:hover .archetype__previewText, .archetype__preview:hover .archetype__previewText, .archetype__preview:hover .archetype__previewText{
+  transform: translateX(8px);
+}
+
+.archetype__behaviour{
+  @include flexSpaceBetween;
+  padding: $primaryPadding--1half $primaryPadding $primaryPadding 0;
+  box-sizing: border-box;
+}
+
+.archetype__behaviourSecondary{
+
+}
+
+@media all and (max-width: 600px) {
+
+  .archetypes__collection{
+    margin-bottom: 0;
+  }
+
+  .archetype__preview{
+    padding: $primaryPadding--half 0;
+  }
+
+  .archetype__previewImage{
+    width: 30%;
+  }
+
+  .archetype__previewText{
+    left: 15%;
+  }
+}
+
+/*----- Archetype full content -----*/
+
+.archetype{
+  background: $white;
+  max-width: 1160px;
+  width: 100%;
+  margin: 0;
+}
+
+.archetype__image{
+  width: calc(100% - #{calculate-rem(30px)});
+  max-width: calculate-rem(150px);
+  border-radius: 100%;
+  border: 5px solid $primaryPurple;
+}
+
+.archetype__name{
+  margin: calculate-rem(26px) 0 0 0;
+  color: $primaryPurple;
+}
+
+.archetype__desc{
+  color: $primaryPurple--dark;
+  margin: $primaryPadding--1half 0;
+}
+
+.archetype__info{
+  @include flexSpaceBetween;
+}
+
+.archetype__list{
+  list-style: disc;
+  list-style-position: outside;
+  padding: 0 0 0 calculate-rem(23px);
+}
+
+.archetype__list li{
+  padding: calculate-rem(3px) 0;
+}
+
+.archetype__infoText, .archetype__list{
+  margin: $primaryPadding--half 0 calculate-rem(50px) 0;
+}
+
+.archetype__shareButtons{
+  padding: calculate-rem(10px) 0 $primaryPadding--1half;
+}
+
+.archetype__link{
+  color: $accentBlue;
+  text-decoration: underline;
+}
+
+@media all and (max-width: 900px) {
+
+  .archetype__image{
+    margin: 0 0 $primaryPadding--half 0;
+  }
+}
+
+@media all and (max-width: 600px) {
+
+  .archetype__image{
+    width: 25%;
+  }
+
+  .archetype__name{
+    width: 100vw;
+  }
+
+  .archetype__desc{
+    margin: $primaryPadding 0;
+  }
+
+  .archetype__infoText, .archetype__list{
+    margin-bottom: $primaryPadding;
+  }
+
+  .archetype__list li{
+    padding: 0;
+  }
+}
+
+/*----- Archetype Results -----*/
+
+.test__resultIntro{
+  margin: $primaryPadding--1half 0;
+}
